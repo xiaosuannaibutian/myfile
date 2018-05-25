@@ -1,0 +1,48 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+input,a{outline:none;}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../iconfont/iconfont.eot');
+  src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../iconfont/iconfont.woff') format('woff'),
+  url('../iconfont/iconfont.ttf') format('truetype'),
+  url('../iconfont/iconfont.svg#iconfont') format('svg');
+}
+@mixin flexcommon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body{
+    background: #f0f0f0;
+}
+header{margin: 0 auto;width: 982px;}
+header{
+    border: 1px solid;
+    height: 70px;
+    @include flexcommon;
+    a{
+        
+    }
+    
+}
+//$nav-color: #F90;
+//#name {
+//$width: 100px;
+//width: $width;
+//color: $nav-color;
+//}
+//.error {
+//border: 1px solid red;
+//background-color: #fdd;
+//}
+//.seriousError {
+//@extend .error;
+//}
