@@ -6,7 +6,6 @@ a{text-decoration:none; color:#333;}
 h1,h2,h3,h4,h5,h6{font-weight:100;}
 body{ font-family:"微软雅黑";}
 input,a{outline:none;}
-
 @font-face {
   font-family: 'iconfont';
   src: url('../iconfont/iconfont.eot');
@@ -15,23 +14,147 @@ input,a{outline:none;}
   url('../iconfont/iconfont.ttf') format('truetype'),
   url('../iconfont/iconfont.svg#iconfont') format('svg');
 }
+$normal-font:12px;
+$normal-fontcolor:#888888;
+$grey-color:#969696;
+$dpink-color:#d10048;
 @mixin flexcommon {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:space-between;
+}
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+@mixin iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
 }
 body{
     background: #f0f0f0;
 }
-header{margin: 0 auto;width: 982px;}
+header,.banner,.banner img,footer{margin: 0 auto;width: 982px;}
 header{
-    border: 1px solid;
-    height: 70px;
-    @include flexcommon;
-    a{
-        
+  height: 70px;
+  @include flexcommon;
+  font-weight: 100;
+  div{
+    display: flex;
+    @include flexcenter;
+    color: #a0a0a0;
+    font-family:"arial";
+    span{
+      @include iconfont;
+      margin-left: 12px;
+      color:#A0A0A0;
+      font-size:$normal-font;
+      &:nth-child(1),&:nth-child(3){
+        font-size: 20px;
+        color: $grey-color;
+        cursor:pointer;
+      }
+      &:nth-child(3){
+        position: relative;  
+        i{
+        top:-3px;
+        left: 15px;
+        position: absolute;
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        font-size:$normal-font;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 14px;
+        font-style: normal;
+        background: $dpink-color;
+        color: #FFFFFF;
+        } 
+      } 
+      a{
+        padding:0 5px;
+        color: $grey-color;
+        font:{
+          size: $normal-font;
+        }
+        &:hover{
+          color: $normal-fontcolor;
+        }
+      }
     }
-    
+  }
+}
+nav{
+    height: 100%;
+    width: 74px;
+    position: fixed;
+    background: $dpink-color;
+    padding-top: 10px;
+    ul{
+        li{
+            height: 46px;
+            background:{
+              image:url(../img/home/line.png);
+              repeat: no-repeat;
+              size:contain;
+              position:left bottom;
+              }
+            a{
+              display: block;
+              height: 45px;
+              color: #FFFFFF;
+              font-size:$normal-font;
+              @include flexcenter;
+              flex-direction: column;
+              &:hover{
+                  background: #db366f;
+              }
+            }
+         }
+    }
+}
+aside{
+    width: 54px;
+    position: fixed;
+    right: 0;
+    top: 70px;
+}
+footer{
+    @include flexcenter;
+    flex-wrap: wrap;
+    section{
+        width: 120px;
+        height: 120px;
+        @include flexcenter;
+        @include iconfont;
+        flex-direction: column;
+        cursor: pointer;
+        img{
+          display: block;
+          width: 70px; 
+          height: 70px;
+          font-size: 80px;
+          color: #ababab;
+          text-align: center;
+        }
+      h3{
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          color: #888888;
+      }
+      
+    }
+    .list{
+       width: 960px; 
+       @include flexcommon;
+    }
 }
 //$nav-color: #F90;
 //#name {

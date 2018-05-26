@@ -4,25 +4,140 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="css/work.css" />
+		<link rel="stylesheet" href="css/banner.css" />
 	</head>
+	<script src="js/require.js"  type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/common.js"></script>
+		<script type="text/javascript">
+			require.config({
+			    paths : {
+			        "jquery" : ["http://libs.baidu.com/jquery/2.0.3/jquery"],   
+			        "main":"js/main"
+			    }
+			})
+			require(["jquery","js/main"],function(){
+				$(function(){
+				})
+			});
+		</script>
 	<body>
+		<nav>
+			<ul>
+				<li><a href="#">首&nbsp;页</a></li>
+				<li><a href="#">品牌系列</a></li>
+				<li><a href="#">美容护肤</a></li>
+				<li><a href="#">健康养生</a></li>
+				<li><a href="#">家居日用</a></li>
+				<li><a href="#">积分换购</a></li>
+				<li><a href="#"><span>VIP</span><span>会员专区</span></a></li>
+				<li><a href="#">关于麦考林</a></li>
+				<li><a href="#">企业荣誉</a></li>
+			</ul>
+		</nav>
+		<aside>
+			<a href="#">
+				<img src="img/home/rightSider_01.png"/>
+			</a>
+			<a href="#">
+				<img src="img/home/rightSider_02.png"/>
+			</a>
+			<a href="#">
+				<img src="img/home/gonggao.jpg"/>
+			</a>
+		</aside>
 		<header>
 			<a href="index.html">
 				<img src="img/home/newlogo.png" alt="麦考林"/>
 			</a>
 			<div>
 				<span>
-					<a href="#"></a>
-					<a href="#"></a>
-					<a href="#"></a>
+					&#xe651;
+				</span>
+				<span>|
+					<a href="#">登录</a>|
+					<a href="#">注册</a>|
+					<a href="#">我的账户</a>|
 				</span>
 				<span>
-					<i></i>
+					&#xe63f;
+					<i>1</i>
 				</span>
 				<span>
 					<img src="img/home/tel-call.png"/>
 				</span>
 			</div>
 		</header>
+		<div class="banner">
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/1446859816349710428.jpg" class="first"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+			<img src="img/home/blank.jpg" class="second"/>
+		</div>
+		<footer>
+			<section>
+				<img src="img/home/mark1.jpg" />
+				<h3>100%正品保证</h3>
+			</section>
+			<section>
+				<img src="img/home/mark2.jpg" />
+				<h3>专业在线客服</h3>
+			</section>
+			<section>
+				<img src="img/home/mark3.jpg" />
+				<h3>满99元包邮</h3>
+			</section>
+			<div class="list">
+				<ul>
+					<li>新手指南</li>
+					<li><a href="#">新会员注册</a></li>
+					<li><a href="#">购物演示</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<ul>
+					<li>付款方式</li>
+					<li><a href="">银行卡支付</a></li>
+					<li><a href="">支付宝支付</a></li>
+					<li><a href="">余额支付</a></li>
+				</ul>
+				<ul>
+					<li>售后服务</li>
+					<li><a href="#">退换货政策</a></li>
+					<li><a href="#">退换货流程</a></li>
+					<li><a href="#">退款流程</a></li>
+					<li><a href="#">发票说明</a></li>
+				</ul>
+				<ul>
+					<li>特色服务</li>
+					<li><a href="#">贵宾专区</a></li>
+					<li><a href="#">在线客服</a></li>
+				</ul>
+				<ul>
+					<li>麦考林生活家</li>
+					<li><img src="img/home/dingyue.jpg"></li>
+				</ul>
+				<ul>
+					<li>麦考林服务</li>
+					<li><img src="img/home/fuwu.jpg"></li>
+				</ul>
+			</div>
+		</footer>	
+	
 	</body>
 </html>

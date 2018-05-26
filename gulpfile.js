@@ -9,6 +9,9 @@ var imagemin = require( "gulp-imagemin");
 gulp.task("copy-sass",function(){
 	gulp.src("sass/*.scss").pipe(sass()).pipe(gulp.dest("dist/css")).pipe(connect.reload());
 })
+gulp.task("copy-css",function(){
+	gulp.src("sass/*.css").pipe(gulp.dest("dist/css")).pipe(connect.reload());
+})
 gulp.task("copy-index",function(){
 	gulp.src("index.html").pipe(gulp.dest("dist")).pipe(connect.reload());
 })
@@ -18,6 +21,9 @@ gulp.task("copy-icon",function(){
 gulp.task("copy-img",function(){
 	gulp.src("img/**/*.*").pipe(gulp.dest("dist/img")).pipe(connect.reload());
 })
+gulp.task("copy-js",function(){
+	gulp.src("js/*.js").pipe(gulp.dest("dist/js")).pipe(connect.reload());
+})
 gulp.task("server",function(){ 
 	connect.server({
 		root:"dist",
@@ -25,7 +31,8 @@ gulp.task("server",function(){
 	});
 	gulp.watch("sass/*.scss",["copy-sass"]);
 	gulp.watch("index.html",["copy-index"]);
-	gulp.watch("iconfont/*.*",["copy-icon"]);
+	gulp.watch("js/*.js",["copy-js"]);
+	gulp.watch("sass/*.css",["copy-css"]);
 })
 /*gulp.task('copy-image',function(){
     gulp.src("img/*.jpg").pipe(gulp.dest("dist/images"));
