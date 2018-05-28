@@ -3,17 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/work.css" />
 		<link rel="stylesheet" href="css/banner.css" />
+		<link rel="stylesheet" href="css/falls.css"/>
 	</head>
 	<script src="js/require.js"  type="text/javascript" charset="utf-8"></script>
-	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/jquery.js"></script>
 	<script src="js/common.js"></script>
 		<script type="text/javascript">
 			require.config({
 			    paths : {
-			        "jquery" : ["http://libs.baidu.com/jquery/2.0.3/jquery"],   
-			        "main":"js/main"
+			        "jquery" : ["http://libs.baidu.com/jquery/2.0.3/jquery"]
 			    }
 			})
 			require(["jquery","js/main"],function(){
@@ -25,7 +26,7 @@
 		<nav>
 			<ul>
 				<li><a href="#">首&nbsp;页</a></li>
-				<li><a href="#">品牌系列</a></li>
+				<li name="newsleter"><a href="#">品牌系列</a></li>
 				<li><a href="#">美容护肤</a></li>
 				<li><a href="#">健康养生</a></li>
 				<li><a href="#">家居日用</a></li>
@@ -33,6 +34,14 @@
 				<li><a href="#"><span>VIP</span><span>会员专区</span></a></li>
 				<li><a href="#">关于麦考林</a></li>
 				<li><a href="#">企业荣誉</a></li>
+			</ul>
+		</nav>
+		<nav>
+			<ul>
+				<li></li>
+				<li><a href="#">维您</a></li>
+				<li><a href="#">LA CELLER</a></li>
+				<li><a href="#">秘密花园</a></li>
 			</ul>
 		</nav>
 		<aside>
@@ -46,6 +55,7 @@
 				<img src="img/home/gonggao.jpg"/>
 			</a>
 		</aside>
+		<div class="total"></div>
 		<header>
 			<a href="index.html">
 				<img src="img/home/newlogo.png" alt="麦考林"/>
@@ -90,6 +100,166 @@
 			<img src="img/home/blank.jpg" class="second"/>
 			<img src="img/home/blank.jpg" class="second"/>
 		</div>
+		
+		<div class="main" id="main">
+			<!--1-->
+			<section class="theme">
+				<img src="img/home/1429134254077145381.jpg" class="kind1"/>
+			</section>
+			<!--2-->
+			<section class="pro">
+				<div class="product_level1">
+					<img src="img/1/1490292454036812750.jpg"/>
+					<article>
+						<h2>LA CELLER 胶原蛋白精华线球超值分享装</h2>
+						<p>神奇的胶原蛋白线球，具有三重螺旋分子结构，溶于水并被吸收，不受温度影响，使肌肤滋润、光泽、有弹性！</p>
+						<div>￥3820</div>
+						<span></span>
+					</article>
+					
+				</div>
+				<div class="product_level2">
+					<img src="img/1/1490296417710181858.jpg"/>
+					<article>
+						<h2>LA CELLER 胶原蛋白精华线球超值分享装</h2>
+						<p>神奇的胶原蛋白线球，具有三重螺旋分子结构，溶于水并被吸收，不受温度影响，使肌肤滋润、光泽、有弹性！</p>
+						<div class="m_char">
+							<span>&#xe63f;</span>
+							<span>查看详情&gt;&gt;</span>
+						</div>
+						<img src="img/1/6852_P_1471545298649.jpg"/>
+						<img src="img/1/6852_P_1471545298659.jpg" />
+					</article>
+					<em>&times;</em>
+				</div>
+			</section>
+			<!--3-->
+			<section class="pro">
+				<div class="product_level1">
+					<article>
+						<h2>秘密花园玫瑰鲜活水</h2>
+						<p>优选新鲜玫瑰花瓣，采用特殊工艺，单纯萃取玫瑰花瓣的水分，滴滴精粹，层层沁润肌肤；馥郁的玫瑰芬芳，淡雅自然…</p>
+						<div>￥499</div>
+						<span></span>
+					</article>
+					<img src="img/2/1490296250101809908.jpg"/>
+				</div>
+				<div class="product_level2">
+					<img src="img/2/1490296369700099015.jpg"/>
+					<article>
+						<h2>秘密花园玫瑰鲜活水</h2>
+						<p>优选新鲜玫瑰花瓣，采用特殊工艺，单纯萃取玫瑰花瓣的水分，滴滴精粹，层层沁润肌肤；馥郁的玫瑰芬芳，淡雅自然…</p>
+						<div class="m_char">
+							<span>&#xe63f;</span>
+							<span>查看详情&gt;&gt;</span>
+						</div>
+						<img src="img/2/5428_P_1468174726362.jpg"/>
+						<img src="img/2/5428_P_1468174727692.jpg" />
+					</article>
+					<em>&times;</em>
+				</div>
+			</section>
+			<!--4-->
+			<section class="pro">
+				<div class="product_level1">
+					<article>
+						<h2>秘密花园</h2>
+						<p>低碳、环保；安全、有效。坚持汲取自然植物的力量，以绿色原料、环保包装来缔造健康肌肤为理念; 采用符合国际所认可的生产标准，创造安全...</p>
+						<div>查看详情&gt;&gt;</div>
+						<span></span>
+					</article>
+					<img src="img/3/1429135533360184232.jpg"/>
+				</div>
+			</section>
+			<!--5-->
+			<section class="theme2">
+				<img src="img/home/1490294065358480530.jpg" class="kind2"/>
+			</section>
+			<!--6-->
+			<section class="pro">
+				<div class="product_level1 kindle2">
+					<img src="img/4/1446775745120736876.jpg"/>
+					<article>
+						<h2>秘密花园玫瑰滋养护手霜</h2>
+						<p>滋养双手，让肌肤拥有舒润质感。淡淡玫瑰香萦绕指尖，衬的双手愈发柔美。蕴含牛油果树油脂及银耳提取物等保湿滋养成分，配合丰盈乳霜质地，水润呵护双手。</p>
+						<div></div>
+						<span></span>
+					</article>
+					
+				</div>
+				<div class="product_level2">
+					<img src="img/4/1446775745694048159.jpg"/>
+					<article>
+						<h2>秘密花园玫瑰滋养护手霜</h2>
+						<p>滋养双手，让肌肤拥有舒润质感。淡淡玫瑰香萦绕指尖，衬的双手愈发柔美。蕴含牛油果树油脂及银耳提取物等保湿滋养成分，配合丰盈乳霜质地，水润呵护双手。</p>
+						<div class="m_char">
+							<span>&#xe63f;</span>
+							<span>查看详情&gt;&gt;</span>
+						</div>
+						<img src="img/4/6092_thumb_P_1461889087513.jpg"/>
+						<img src="img/4/6092_thumb_P_1461889088005.jpg" />
+						<img src="img/4/6092_thumb_P_1461889088226.jpg" />
+					</article>
+					<em>&times;</em>
+				</div>
+			</section>
+			<!--7-->
+			<section class="pro">
+				<div class="product_level1">
+					<article>
+						<h2>LA CELLER 多效修护马油面膜</h2>
+						<p>优选孔状膜布，帮助肌肤自由呼吸；轻薄柔软，轻松贴服多种脸型。特别添加含有丰富不饱和脂肪酸的优质马油，有效缓解干燥、粗糙的肌肤状态…</p>
+						<div>￥198</div>
+						<span></span>
+					</article>
+					<img src="img/5/1490293913629056285.jpg"/>
+				</div>
+				<div class="product_level2">
+					<img src="img/5/1490296396715895442.jpg"/>
+					<article>
+						<h2>LA CELLER 多效修护马油面膜</h2>
+						<p>优选孔状膜布，帮助肌肤自由呼吸；轻薄柔软，轻松贴服多种脸型。特别添加含有丰富不饱和脂肪酸的优质马油，有效缓解干燥、粗糙的肌肤状态…</p>
+						<div class="m_char">
+							<span>&#xe63f;</span>
+							<span>查看详情&gt;&gt;</span>
+						</div>
+						<img src="img/5/8765_thumb_P_1482517430013.jpg"/>
+						<img src="img/5/8765_thumb_P_1482517430295.jpg"/>
+						<img src="img/5/8765_thumb_P_1482517430366.jpg" />
+					</article>
+					<em>&times;</em>
+				</div>
+			</section>
+			<!--8-->
+			<section class="pro">
+				<div class="product_level1">
+					<article>
+						<h2>LA CELLER 胶原蛋白精华线球超值分享装</h2>
+						<p>神奇的胶原蛋白线球，具有三重螺旋分子结构，溶于水并被吸收，不受温度影响，使肌肤滋润、光泽、有弹性！</p>
+						<div>￥3820</div>
+						<span></span>
+					</article>
+					<img src="img/1/1490292454036812750.jpg"/>
+				</div>
+				<div class="product_level2">
+					<img src="img/1/1490296417710181858.jpg"/>
+					<article>
+						<h2>LA CELLER 胶原蛋白精华线球超值分享装</h2>
+						<p>神奇的胶原蛋白线球，具有三重螺旋分子结构，溶于水并被吸收，不受温度影响，使肌肤滋润、光泽、有弹性！</p>
+						<div class="m_char">
+							<span>&#xe63f;</span>
+							<span>查看详情&gt;&gt;</span>
+						</div>
+						<img src="img/1/6852_P_1471545298649.jpg"/>
+						<img src="img/1/6852_P_1471545298659.jpg" />
+					</article>
+					<em>&times;</em>
+				</div>
+			</section>
+		</div>
+		
+		
+		
 		<footer>
 			<section>
 				<img src="img/home/mark1.jpg" />
@@ -130,14 +300,34 @@
 				</ul>
 				<ul>
 					<li>麦考林生活家</li>
-					<li><img src="img/home/dingyue.jpg"></li>
+					<li><img src="img/home/dingyue.jpg"/></li>
 				</ul>
 				<ul>
 					<li>麦考林服务</li>
-					<li><img src="img/home/fuwu.jpg"></li>
+					<li><img src="img/home/fuwu.jpg"/></li>
 				</ul>
 			</div>
-		</footer>	
-	
+		</footer>
+		<hr />
+	<div class="infor">
+		<div class="serve">
+			<a href="#">关于麦考林</a>|
+			<a href="#">INVESTOR RELATIONS</a>|
+			<a href="#">联系我们</a>|
+			<a href="#">服务中心</a>|
+			<a href="#">加入我们</a>
+		</div>
+		<div class="monitor">
+			<a href="#"><img src="img/home/newicon.png" /></a>
+			<a>沪ICP备05003606号Copyright©2011-2015 MecoxLane Inc. All Rights Reserved</a>
+		</div>
+		<div class="befile">
+			<a href="#"><img src="img/home/xfwqNew.jpg"/></a>
+			<a href="#"><img src="img/home/evaluate.jpg"/></a>
+			<a href="#"><img src="img/home/beian.png"/>沪公网安备 31010402000234号</a>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

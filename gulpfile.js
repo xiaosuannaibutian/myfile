@@ -24,6 +24,9 @@ gulp.task("copy-img",function(){
 gulp.task("copy-js",function(){
 	gulp.src("js/*.js").pipe(gulp.dest("dist/js")).pipe(connect.reload());
 })
+gulp.task("copy-php",function(){
+	gulp.src("php/*.php").pipe(gulp.dest("dist/php")).pipe(connect.reload());
+})
 gulp.task("server",function(){ 
 	connect.server({
 		root:"dist",
@@ -33,6 +36,7 @@ gulp.task("server",function(){
 	gulp.watch("index.html",["copy-index"]);
 	gulp.watch("js/*.js",["copy-js"]);
 	gulp.watch("sass/*.css",["copy-css"]);
+	gulp.watch("php/*.php",["copy-php"]);
 })
 /*gulp.task('copy-image',function(){
     gulp.src("img/*.jpg").pipe(gulp.dest("dist/images"));

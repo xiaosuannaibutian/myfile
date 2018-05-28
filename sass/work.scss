@@ -2,7 +2,7 @@ body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin
 ul,li,ol{list-style:none;}
 img,fieldset{border:0; }
 img{display:block;}
-a{text-decoration:none; color:#333;}
+a,a:hover{text-decoration:none; color:#333;}
 h1,h2,h3,h4,h5,h6{font-weight:100;}
 body{ font-family:"微软雅黑";}
 input,a{outline:none;}
@@ -38,7 +38,7 @@ $dpink-color:#d10048;
 body{
     background: #f0f0f0;
 }
-header,.banner,.banner img,footer{margin: 0 auto;width: 982px;}
+header,.banner,.banner img,footer,.infor{margin: 0 auto;width: 982px;}
 header{
   height: 70px;
   @include flexcommon;
@@ -96,15 +96,17 @@ nav{
     position: fixed;
     background: $dpink-color;
     padding-top: 10px;
+    z-index: 1052;
     ul{
         li{
             height: 46px;
+            position: relative;
             background:{
               image:url(../img/home/line.png);
               repeat: no-repeat;
               size:contain;
               position:left bottom;
-              }
+            }
             a{
               display: block;
               height: 45px;
@@ -118,6 +120,22 @@ nav{
             }
          }
     }
+  
+  &:nth-child(2){
+  z-index: 1051;
+  opacity:0;
+  left:0;
+  background:#ababab;
+  height: 40%;
+  width:74px;
+  ul{ 
+      li{
+      background-image: none;
+      border-bottom:1px solid #b8b8b6;   
+      }
+  }
+ 
+  }  
 }
 aside{
     width: 54px;
@@ -152,20 +170,58 @@ footer{
       
     }
     .list{
-       width: 960px; 
-       @include flexcommon;
+       width: 700px; 
+       display: flex;
+       margin-bottom:20px;
+       ul{
+          flex: 1; 
+           li{
+               padding: 5px 0;
+               &:nth-child(1){
+                   font-size: 18px;
+                   color: $normal-fontcolor;
+               }
+               a{
+                   font-size:13px;
+                   color: $normal-fontcolor;
+               }
+               img{
+                   width: 100px;
+                   height: 100px;
+                   cursor: pointer;
+               }
+           }
+       }
     }
 }
-//$nav-color: #F90;
-//#name {
-//$width: 100px;
-//width: $width;
-//color: $nav-color;
-//}
-//.error {
-//border: 1px solid red;
-//background-color: #fdd;
-//}
-//.seriousError {
-//@extend .error;
-//}
+hr{
+  border-top:1px solid #dce0e3;
+}
+.infor{
+    margin-top: 25px;
+    @include flexcommon;
+    flex-direction: column;
+    .serve{
+        font-size:$normal-font; 
+        color:$normal-fontcolor; 
+        a{
+          font-size:$normal-font;
+          padding: 0 8px;
+          color:$normal-fontcolor;   
+        }
+    }
+    .monitor,.befile{
+        display: flex;
+       a{
+        display: block;
+        @include flexcommon;
+        font-size: 12px; 
+        color:$normal-fontcolor;
+        }
+    }
+    .befile{
+        a{
+            padding: 10px 10px;
+        }
+    }
+}
