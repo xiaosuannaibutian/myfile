@@ -1,46 +1,55 @@
-define(function(){
+define(["js/doModel"],function(a){
 	function doFalls(){
 		$(function(){
-			$(".product_level1").mousemove(function(){
-				if($(this).hasClass("kindle2")){
-					$(this).children("img").stop().animate({left:6},200)
-				}
-				else{
-					$(this).children("img").stop().animate({right:6},200)
-				}
-				
-			});
-			$(".product_level1").mouseout(function(){
-				if($(this).hasClass("kindle2")){
-					$(this).children("img").stop().animate({left:0},200)
-				}
-				else{
-					$(this).children("img").stop().animate({right:0},200)
-				}
-			});
 				var oMain=document.getElementById("main");
-				/*$.ajax({
-					url: "php/showList.php",
+				var counter=0;
+				$.ajax({
+					url: "../php/showList.php",
 					success: function(data){
 						data = JSON.parse(data);
+						var counter=0
+					for(var k=0;k<4;k++){
 						for(var i=0;i<data.length;i++){
-							console.log(data[i]);
-							if(data[i].lowImg){
-								console.log(oMain);
+							counter++;
+							var sTrImg="";
+							var sTrSpan="";
+							var variable=Math.ceil(Math.random()*3);
+							var variable2=Math.ceil(Math.random()*3)+3;
+							if(counter%4==0){
 								oMain.innerHTML+=`
-								<section class="pro">
-									<div class="product_level1">
-										<img src="img/1/${data[i].masterImg}"/>
+								<section class="theme">
+									<img src="img/common/${variable}.jpg" class="kind1"/>
+								</section>`
+							}
+							if((counter+2)%5==0){
+								oMain.innerHTML+=`
+								<section class="theme2">
+									<img src="img/common/${variable2}.jpg" class="kind2"/>
+								</section>`
+							}
+							if(counter%3==0){
+								sTrSpan='<div class="product_level1 kindle2">'
+							}else{
+								sTrSpan='<div class="product_level1">'
+							}
+							if(data[i].lowImg){
+								var sImg=data[i].imgurl.split(",");
+								for(var j=0;j<sImg.length;j++){
+									sTrImg+="<img src='img/"+data[i].id+"/"+sImg[j]+"'/>";
+								}
+								oMain.innerHTML+=`
+								<section class="pro" data-id="${data[i].id}">
+									${sTrSpan}
+										<img src="img/${data[i].id}/${data[i].masterImg}"/>
 										<article>
 											<h2>${data[i].title}</h2>
 											<p>${data[i].introduce}</p>
 											<div>￥${data[i].price}</div>
 											<span></span>
 										</article>
-										
 									</div>
 									<div class="product_level2">
-										<img src="img/1/1490296417710181858.jpg"/>
+										<img src="img/${data[i].id}/${data[i].lowImg}"/>
 										<article>
 											<h2>${data[i].title}</h2>
 											<p>${data[i].introduce}</p>
@@ -48,41 +57,60 @@ define(function(){
 												<span>&#xe63f;</span>
 												<span>查看详情&gt;&gt;</span>
 											</div>
-											<img src="img/1/6852_P_1471545298649.jpg"/>
-											<img src="img/1/6852_P_1471545298659.jpg" />
-											<img src="img/1/6852_P_1471545298659.jpg" />
-										</article>
+											${sTrImg}
+											</article>
 										<em>&times;</em>
 									</div>
 								</section>
 								`;
+							}else{
+								oMain.innerHTML+=`
+								<section class="pro" data-id="${data[i].id}">
+									${sTrSpan}
+										<img src="img/${data[i].id}/${data[i].masterImg}"/>
+										<article>
+											<h2>${data[i].title}</h2>
+											<p>${data[i].introduce}</p>
+											<div>查看详情&gt;&gt;</div>
+											<span></span>
+										</article>
+									</div>
+								</section>
+								`
 							}
 						}
+					}
+						
+					  a.doModel();	
  					}
 					
-				});
-*/							
-				$oSection=$(".main section");
-				$mt=$ml=6;
-				$perWid=$oSection.width();
-				$arrHei=[];
-				for($i=0;$i<3;$i++){
-					$oSection[$i].style.top=0;
-					$oSection[$i].style.left=($perWid+$ml)*$i+"px";
-					$arrHei.push($oSection[$i].offsetHeight);
-				}
-				for($i=3;$i<$oSection.length;$i++){
-					var arrHei=$arrHei
-					$oSection[$i].style.top=$arrHei[getMinIndex(arrHei)]+$mt+"px";
-					$oSection[$i].style.left=$oSection[getMinIndex(arrHei)].style.left;
-					$arrHei[getMinIndex($arrHei)]+=$oSection[$i].offsetHeight+$mt;
-					//console.log($oSection[$i].offsetHeight);
-				}
-				function getMinIndex(arr){
-					var minVal = Math.min.apply(null,arr);
-					var minIndex = arr.indexOf(minVal);
-					return minIndex;
-				}
+				}).done(
+					function(data){
+						$oSection=$(".main section");
+						$mt=$ml=6;
+						$perWid=$oSection.width();
+						$arrHei=[];
+						for($i=0;$i<3;$i++){
+							$oSection[$i].style.top=0;
+							$oSection[$i].style.left=($perWid+$ml)*$i+"px";
+							$arrHei.push($oSection[$i].offsetHeight);
+						}
+						for($i=3;$i<$oSection.length;$i++){
+							var arrHei=$arrHei
+							$oSection[$i].style.top=$arrHei[getMinIndex(arrHei)]+$mt+"px";
+							$oSection[$i].style.left=$oSection[getMinIndex(arrHei)].style.left;
+							$arrHei[getMinIndex($arrHei)]+=$oSection[$i].offsetHeight+$mt;
+							//console.log($oSection[$i].offsetHeight);
+						}
+						function getMinIndex(arr){
+							var minVal = Math.min.apply(null,arr);
+							var minIndex = arr.indexOf(minVal);
+							return minIndex;
+						}
+					}
+				)
+							
+				
 		})
 	}
 	return {

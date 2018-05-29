@@ -15,6 +15,9 @@ gulp.task("copy-css",function(){
 gulp.task("copy-index",function(){
 	gulp.src("index.html").pipe(gulp.dest("dist")).pipe(connect.reload());
 })
+gulp.task("copy-html",function(){
+	gulp.src("html/*.html").pipe(gulp.dest("dist/html")).pipe(connect.reload());
+})
 gulp.task("copy-icon",function(){
 	gulp.src("iconfont/*.*").pipe(gulp.dest("dist/iconfont")).pipe(connect.reload());
 })
@@ -34,6 +37,7 @@ gulp.task("server",function(){
 	});
 	gulp.watch("sass/*.scss",["copy-sass"]);
 	gulp.watch("index.html",["copy-index"]);
+	gulp.watch("html/*.html",["copy-html"]);
 	gulp.watch("js/*.js",["copy-js"]);
 	gulp.watch("sass/*.css",["copy-css"]);
 	gulp.watch("php/*.php",["copy-php"]);

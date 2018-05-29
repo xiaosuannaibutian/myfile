@@ -1,9 +1,10 @@
-define(["js/doWindow","js/doNav","js/doFalls","js/doModel"],function(a,b,c,d){
+define(["js/doWindow","js/doNav","js/doFalls"],function(a,b,c){
 	function exec(){
 		a.doWindow();
 		b.doNav();
+		
 		c.doFalls();
-		d.doModel();
+		//d.doModel();
 	}
 	exec();
 })

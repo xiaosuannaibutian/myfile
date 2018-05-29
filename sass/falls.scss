@@ -29,12 +29,13 @@ $dpink-color:#d10048;
     position: relative;
     width: 988px;
     margin: 0 auto;
-    height: 3000px;
+    height: 2850px;
     section{
         width: 325px;
         height: 194px;
         position:absolute;
         display: flex;
+        cursor: pointer;
         line-height: 18px;
         &:hover .product_level1 article{background: #eeafce;}
         &:hover .product_level1 article span{border-left:16px solid #eeafce;}
@@ -178,10 +179,11 @@ $dpink-color:#d10048;
         height: 194px;    
     }
     .theme2 {
-        height: 400px;
+        height: 394px;
        .kind2{
+        display: block;
         width: 325px;
-        height: 400px;
+        height: 394px;
     } 
     }
      .kindle2{
