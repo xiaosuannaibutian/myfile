@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/work.css" />
 		<link rel="stylesheet" href="css/banner.css" />
 		<link rel="stylesheet" href="css/falls.css"/>
@@ -25,7 +24,7 @@
 	<body>
 		<nav>
 			<ul>
-				<li><a href="#">首&nbsp;页</a></li>
+				<li><a href="index.html">首&nbsp;页</a></li>
 				<li name="newsleter"><a href="#">品牌系列</a></li>
 				<li><a href="#">美容护肤</a></li>
 				<li><a href="#">健康养生</a></li>
@@ -39,9 +38,9 @@
 		<nav>
 			<ul>
 				<li></li>
-				<li><a href="#">维您</a></li>
-				<li><a href="#">LA CELLER</a></li>
-				<li><a href="#">秘密花园</a></li>
+				<li><a href="html/list.html">维您</a></li>
+				<li><a href="html/list.html">LA CELLER</a></li>
+				<li><a href="html/list.html">秘密花园</a></li>
 			</ul>
 		</nav>
 		<aside>
@@ -65,13 +64,14 @@
 					&#xe651;
 				</span>
 				<span>|
-					<a href="#">登录</a>|
-					<a href="#">注册</a>|
+					<div style="display:none" id="hav"><a href="html/login.html">登录</a>|
+					<a href="html/rigster.html">注册</a>|</div>
+					<div style="display:none" id="del"><a href="#" id="del">退出</a>|</div>
 					<a href="#">我的账户</a>|
 				</span>
-				<span>
+				<span id="car">
 					&#xe63f;
-					<i>1</i>
+					<a id="chartNum"  href="html/chart.html">1</a>
 				</span>
 				<span>
 					<img src="img/home/tel-call.png"/>
@@ -124,7 +124,7 @@
 						<h2>LA CELLER 胶原蛋白精华线球超值分享装</h2>
 						<p>神奇的胶原蛋白线球，具有三重螺旋分子结构，溶于水并被吸收，不受温度影响，使肌肤滋润、光泽、有弹性！</p>
 						<div class="m_char">
-							<span>&#xe63f;</span>
+							<span id="chart">&#xe63f;</span>
 							<span>查看详情&gt;&gt;</span>
 						</div>
 						<img src="img/1/6852_P_1471545298649.jpg"/>
@@ -327,8 +327,10 @@
 			<a href="#"><img src="img/home/beian.png"/>沪公网安备 31010402000234号</a>
 		</div>
 	</div>
+	<div style="margin: 0 auto;">
+		
+	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
 	</body>
 </html>

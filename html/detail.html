@@ -3,14 +3,269 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/work.css" />
+		<link rel="stylesheet" href="../css/detail.css" />
+		<link rel="stylesheet" href="../css/commonmodel.css"
 	</head>
+	<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/require.js"  type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.js"></script>
+	<script type="text/javascript">
+			require.config({
+			    paths : {
+			        "jquery" : ["http://libs.baidu.com/jquery/2.0.3/jquery"]
+			    }
+			})
+			require(["jquery","../js/detail-main"],function(){
+				$(function(){
+				})
+			});
+		</script>
 	<body>
-		aaaaa
+		<nav>
+			<ul>
+				<li><a href="../index.html">首&nbsp;页</a></li>
+				<li name="newsleter"><a href="#">品牌系列</a></li>
+				<li><a href="#">美容护肤</a></li>
+				<li><a href="#">健康养生</a></li>
+				<li><a href="#">家居日用</a></li>
+				<li><a href="#">积分换购</a></li>
+				<li><a href="#"><span>VIP</span><span>会员专区</span></a></li>
+				<li><a href="#">关于麦考林</a></li>
+				<li><a href="#">企业荣誉</a></li>
+			</ul>
+		</nav>
+		<nav>
+			<ul>
+				<li></li>
+				<li><a href="list.html">维您</a></li>
+				<li><a href="list.html">LA CELLER</a></li>
+				<li><a href="list.html">秘密花园</a></li>
+			</ul>
+		</nav>
+		<aside>
+			<a href="#">
+				<img src="../img/home/rightSider_01.png"/>
+			</a>
+			<a href="#">
+				<img src="../img/home/rightSider_02.png"/>
+			</a>
+			<a href="#">
+				<img src="../img/home/gonggao.jpg"/>
+			</a>
+		</aside>
+		<div class="total total2"></div>
+		<div id="popbox">
+			<h2 class="close"><span id="delet">&Chi;</span></h2>
+			<div class="message">商品已成功加入购物车</div>
+			<input type="button" id="gochart" value="去结算"/>
+			<input type="button" id="hong-out"value="继续购物"/>
+		</div>
+		<header>
+			<a href="../index.html">
+				<img src="../img/home/newlogo.png" alt="麦考林"/>
+				<div class="sideText"></div>
+			</a>
+			<div>
+				<span>
+					&#xe651;
+				</span>
+				<span>|
+					<div style="display:none" id="hav"><a href="login.html">登录</a>|
+					<a href="rigster.html">注册</a>|</div>
+					<div style="display:none" id="del"><a href="#" id="del">退出</a>|</div>
+					<a href="#">我的账户</a>|
+				</span>
+				<span id="car">
+					&#xe63f;
+					<a id="chartNum"  href="chart.html"></a>
+				</span>
+				<span>
+					<img src="../img/home/tel-call.png"/>
+				</span>
+			</div>
+		</header>
+		<div class="main" id="main"><!--
+			<div class="main_head">
+				<div id="content">
+					<div id="zoomBox">
+						<div id="midArea">
+							<img src="../img/1/6852_P_1471545298649.jpg" id="midImg">
+							<div id="zoom">
+								<img src="../img/1/6852_P_1471545298649.jpg" id="oImg">
+							</div>
+							<div id="masking-out">
+								
+							</div>
+						</div>
+						<div id="bigArea">
+							<img src="../img/1/6852_P_1471545298649.jpg">
+						</div>
+					</div>
+				</div>
+				<div id="smallArea">
+					<!--点击小图，将中图和大图的img的src换掉-->
+					<!--<img src="../img/1/6852_P_1471545298649.jpg" alt="" />
+					<img src="../img/1/6852_P_1471545298659.jpg" alt="" />
+				</div>
+			</div>
+			<article>
+				<h3>LA CELLER 胶原蛋白精华线球超值分享装</h3>
+				<hr />
+				<div>
+					<span>品牌：LA CELLER</span>
+					<span>商品编号：V15C0190-001</span>
+				</div>
+				<em>￥3820</em>
+				<div class="put">
+					<span>数量：</span>
+					<div id="onum">
+						<span id="subtract">-</span>
+						<input type="text"/>
+						<span id="plus">+</span>
+					</div>
+					
+				</div>
+				<div id="incart">
+						<input type="button" value="加入购物车"/>
+						<input type="button" value="&#xe60c;加入收藏"/>
+				</div>
+			</article>-->
+		</div>
+		<div id="content">
+			<div class="main_body" id="main_body">
+			<!--<div class="message">
+				<h2>
+					<span class="test">商品信息</span>
+					<span class="test">商品评论</span>
+					<span class="test">商品问答</spn>
+				</h2>
+				<div class="showList">
+					<img src="../img/1/details/1.jpg"/>
+					<img src="../img/1/details/2.jpg"/>
+					<img src="../img/1/details/3.jpg"/>
+					<img src="../img/1/details/4.jpg"/>
+					<img src="../img/1/details/5.jpg"/>
+					<img src="../img/1/details/6.jpg"/>
+					<img src="../img/1/details/7.jpg"/>
+					<img src="../img/1/details/8.jpg"/>
+				</div>
+				<div class="comment">
+					<h3><span>商品评价</span></h3> 
+					<article class="comAr">
+						<section>暂无评论</section>
+					</article>
+				</div>
+				<div class="que">
+					<h3><span>商品问答</span></h3>
+					<article class="queAr">
+						<section>
+							<div class="tit"><span>130****&nbsp;:</span>这是blablabla</div>
+							<p><span>客服回答:</span>您好，是正品哦</p>
+						</section>
+						<section>
+							<div class="tit"><span>130****&nbsp;:</span>这是blablabla</div>
+							<p><span>客服回答:</span>您好，是正品哦</p>
+						</section>
+						<section>
+							<div class="tit"><span>130****&nbsp;:</span>这是blablabla</div>
+							<p><span>客服回答:</span>您好，是正品哦</p>
+						</section>
+					</article>
+					<h3 style="border: none;">我要提问</h3>
+					<div class="input">
+						<textarea placeholder="请输入您的评论内容"></textarea>
+						<em>字数限制为5-200</em>
+						<input type="button" value="提交"/>
+					</div>
+					
+					
+				</div>
+			</div>
+			<div class="aside">
+				<h2>相关产品 </h2>
+				<section>
+					<div>
+						<img src="../img/1/1490292454036812750.jpg"/>
+					</div>
+					<h3>LA CELLER 3D胶原蛋白提拉紧致面膜 单片</h3>
+					<span>￥66</span>
+				</section>
+			</div>-->
+		</div>
+		<div id="main_aside">
+			
+		</div>
+		</div>
+		
+		
+		
+		<footer>
+			<section>
+				<img src="../img/home/mark1.jpg" />
+				<h3>100%正品保证</h3>
+			</section>
+			<section>
+				<img src="../img/home/mark2.jpg" />
+				<h3>专业在线客服</h3>
+			</section>
+			<section>
+				<img src="../img/home/mark3.jpg" />
+				<h3>满99元包邮</h3>
+			</section>
+			<div class="list">
+				<ul>
+					<li>新手指南</li>
+					<li><a href="#">新会员注册</a></li>
+					<li><a href="#">购物演示</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<ul>
+					<li>付款方式</li>
+					<li><a href="">银行卡支付</a></li>
+					<li><a href="">支付宝支付</a></li>
+					<li><a href="">余额支付</a></li>
+				</ul>
+				<ul>
+					<li>售后服务</li>
+					<li><a href="#">退换货政策</a></li>
+					<li><a href="#">退换货流程</a></li>
+					<li><a href="#">退款流程</a></li>
+					<li><a href="#">发票说明</a></li>
+				</ul>
+				<ul>
+					<li>特色服务</li>
+					<li><a href="#">贵宾专区</a></li>
+					<li><a href="#">在线客服</a></li>
+				</ul>
+				<ul>
+					<li>麦考林生活家</li>
+					<li><img src="../img/home/dingyue.jpg"/></li>
+				</ul>
+				<ul>
+					<li>麦考林服务</li>
+					<li><img src="../img/home/fuwu.jpg"/></li>
+				</ul>
+			</div>
+		</footer>
+		<hr />
+		<div class="infor">
+			<div class="serve">
+				<a href="#">关于麦考林</a>|
+				<a href="#">INVESTOR RELATIONS</a>|
+				<a href="#">联系我们</a>|
+				<a href="#">服务中心</a>|
+				<a href="#">加入我们</a>
+			</div>
+			<div class="monitor">
+				<a href="#"><img src="../img/home/newicon.png" /></a>
+				<a>沪ICP备05003606号Copyright©2011-2015 MecoxLane Inc. All Rights Reserved</a>
+			</div>
+			<div class="befile">
+				<a href="#"><img src="../img/home/xfwqNew.jpg"/></a>
+				<a href="#"><img src="../img/home/evaluate.jpg"/></a>
+				<a href="#"><img src="../img/home/beian.png"/>沪公网安备 31010402000234号</a>
+			</div>
+		</div>
 	</body>
-	<script>
-		var str = location.search;
-		console.log(str);
-		var proId = str.split("=")[1];
-		console.log(proId);
-	</script>
 </html>

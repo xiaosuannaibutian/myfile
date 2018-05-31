@@ -63,6 +63,7 @@ $dpink-color:#d10048;
     margin: 20px auto;
     overflow: hidden;
     .hot-pro{
+        overflow: hidden;
         margin-top: 20px;
         section{
             cursor: pointer;
@@ -159,22 +160,67 @@ $dpink-color:#d10048;
         display: flex;
         flex-wrap: wrap;
         section{
+           cursor:pointer;
            width:215px;
            height: 302px; 
-           border: 1px solid;
            padding: 0;
            margin: 0 22px 12px 0;
-           display: flex;
-           justify-content: center;
-           figure{
-            height:217px; 
-            display: block;
-            border: 1px solid;
+           div{
+               width:215px;
+               height:215px;
+               border: 1px solid #dadada;
+               display: flex;
+               @include flexcenter;
+               margin-bottom: 10px;
                img{
                    width: 160px;
                    height: 208px;
                }
+               
            }
+           h3{
+               font-size: 13px;
+               height: 44px;
+               line-height: 22px;
+               color:$normal-fontcolor;
+               font-weight: 500;
+           }
+           span{
+               font-size: 13px;
+               height: 35px;
+               line-height: 35px;
+               color: #f30c29;
+           }
+        }
+    }
+    .mainfooter{
+        width: 100%;
+        height: 123px;
+        @include flexcenter
+        a{
+            text-align: center;
+            display:block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            box-sizing: border-box!important;
+            font-size: $normal-font;
+            border:1px solid #d4d4d4;
+            border-radius: 5px;
+            margin: 0 7px;
+            &:nth-child(3){
+                width: 60px;
+            }
+            &:hover{
+            background: #d10048;
+            border: none;
+            color: #ffffff;  
+            }
+        }
+        .now{
+            background: #d10048;
+            border: none;
+            color: #ffffff;
         }
     }
     

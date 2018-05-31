@@ -51,3 +51,61 @@ function getCookie(name){
 function removeCookie(name){
 	setCookie(name,1,-1);
 }
+function chartShow(count){
+	if(getCookie("cart") !== undefined) {
+		var obj = JSON.parse(getCookie("cart"));
+		count.css.display="block";
+		count.css("display","block");
+	} else {
+		var obj = {};
+	}
+	var sum = 0;
+	for(var b in obj) {
+		sum += obj[b];
+	}
+	count.innerHTML = sum;
+	count.html(sum);
+}
+function chart(count,handid,score){
+		if(getCookie("cart") !== undefined) {
+			var obj = JSON.parse(getCookie("cart"));
+		} else {
+			var obj = {};
+			count.css.display="block";
+			count.css("display","block");
+		}
+		if(obj[handid] == undefined) {
+			obj[handid] = 1;
+		} else {
+			obj[handid]+=score;
+		}
+		//console.log(obj);
+		var sum = 0;
+		for(var b in obj) {
+		sum += obj[b];
+		}
+		count.innerHTML = sum;
+		count.html(sum);
+		var objToStr = JSON.stringify(obj);
+		setCookie("cart", objToStr, 7);
+}
+function disPlay(oGet,oDelet){
+	if(getCookie("usermessage") !== undefined){
+		oGet.css("display","none");
+		oDelet.css("display","inline-block");
+	}else{
+		oGet.css("display","inline-block");
+		oDelet.css("display","none");
+	}
+	oDelet.click(function(){
+		removeCookie("usermessage");
+		oGet.css("display","inline-block");
+		oDelet.css("display","none");
+	})
+}
+function toCar(car,location){
+	car.click(function(){
+		window.location.href=location+"chart.html";
+	})
+	
+}

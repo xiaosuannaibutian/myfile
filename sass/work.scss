@@ -39,6 +39,9 @@ body{
     background: #f0f0f0;
 }
 header,.banner,.banner img,footer,.infor{margin: 0 auto;width: 982px;}
+#chartNum{
+    display: none;
+}
 header{
   height: 70px;
   @include flexcommon;
@@ -58,9 +61,10 @@ header{
         color: $grey-color;
         cursor:pointer;
       }
+      
       &:nth-child(3){
         position: relative;  
-        i{
+        a{
         top:-3px;
         left: 15px;
         position: absolute;
@@ -70,7 +74,7 @@ header{
         border-radius: 50%;
         font-size:$normal-font;
         box-sizing: border-box;
-        text-align: center;
+        text-indent: -1px;
         line-height: 14px;
         font-style: normal;
         background: $dpink-color;

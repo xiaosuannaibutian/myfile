@@ -1,0 +1,68 @@
+.total{
+ position: absolute;
+ width: 100%;
+ background:black;
+ opacity: 0;
+ z-index: 1060;
+ display: none;
+}
+#popbox{
+    display: none;
+    padding:0 10px;
+    display: block;
+    position:fixed;
+    width: 300px;
+    height: 150px;
+    background: #FFFFFF;
+    left: 0;
+    right: 0;
+    top: -800px;
+    bottom: 0;
+    margin: auto;
+    z-index: 1070;
+    border-radius: 10px;
+    h2{
+        text-align: right;
+        span{
+            cursor: pointer;
+            display:inline-block;
+            font-size: 15px;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            background: #db0859;
+            color: #f8d0e0;
+        }
+    }
+    .message{
+        margin: 5px 0 15px 0;
+        background: url(../img/home/index-bg.png) no-repeat;
+        background-position-y: -268px;
+        height: 32px;
+        line-height: 32px;
+        margin-left: 35px;
+        padding-left: 50px;
+        color: #888888;
+        font-size: 14px;
+        font-weight: 900;
+    }
+    #gochart,#hong-out{
+        cursor: pointer;
+        padding: 5px 20px;
+        margin:0 15px;
+        border-radius: 3px;
+        border: none;
+        background: #db085a;
+        color: #FFFFFF;
+        font-size: 12px;
+    }
+    #gochart{
+        margin-left: 50px;
+    }
+    #hong-out{
+        background: #CECECE;
+    }
+}
+// kkk

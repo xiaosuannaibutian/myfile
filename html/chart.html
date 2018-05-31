@@ -4,26 +4,14 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="../css/work.css" />
-		<link rel="stylesheet" href="../css/list.css" />
+		<link rel="stylesheet" href="../css/chart.css" />
 	</head>
 	<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/require.js"  type="text/javascript" charset="utf-8"></script>
 	<script src="../js/jquery.js"></script>
-	<script type="text/javascript">
-			require.config({
-			    paths : {
-			        "jquery" : ["http://libs.baidu.com/jquery/2.0.3/jquery"]
-			    }
-			})
-			require(["jquery","../js/list-main"],function(){
-				$(function(){
-				})
-			});
-		</script>
 	<body>
 		<nav>
 			<ul>
-				<li><a href="../index.html">首&nbsp;页</a></li>
+				<li><a href="#">首&nbsp;页</a></li>
 				<li name="newsleter"><a href="#">品牌系列</a></li>
 				<li><a href="#">美容护肤</a></li>
 				<li><a href="#">健康养生</a></li>
@@ -69,36 +57,51 @@
 					<div style="display:none" id="del"><a href="#" id="del">退出</a>|</div>
 					<a href="#">我的账户</a>|
 				</span>
-				<span id="car">
+				<span>
 					&#xe63f;
-					<a id="chartNum" href="chart.html"></a>
+					<a id="chartNum"  href="html/chart.html">1</a>
 				</span>
 				<span>
 					<img src="../img/home/tel-call.png"/>
 				</span>
 			</div>
 		</header>
-		<div class="banner">
-			<img src="../img/home/1446859632620812220.jpg" />
-			<div class="side">
-				<h2>LA CELLER</h2>
-				<p>不变的追求，源于大自然的启迪。 萃取自然，用心创造奇迹。 置身于万物世界，感受美丽的存在…… 让肌肤自由呼吸，呈现更别样光彩！</p>
+		<div class="main">
+			<h2><mark>&#xe63f;</mark>购物车</h2>
+			<div class="main_body" id="main">
+				<div class="tit">
+					<input type="checkbox"/>
+					<span>商品名称</span>
+					<span>价格</span>
+					<span>数量</span>
+					<span>小计(元)</span>
+					<span>操作</span>
+				</div>
+				<!--<section>
+					<input type="checkbox"/>
+					<figure>
+						<img src="../img/1/1490292454036812750.jpg"/>
+						<figcaption>
+							<h3>LA CELLER 胶原蛋白精华线球超值分享装</h3>
+							<i>商品编号：1</i>
+						</figcaption>
+					</figure>
+					<span>￥3820</span>
+					<div class="arith">
+						<div class="minus">-</div>
+						<input type="text" value="1"/>
+						<div class="plus">+</div>
+					</div>
+					<span>￥3820</span>
+					<span class="delet">&Chi;删除</span>
+				</section>-->
 			</div>
-		</div>
-		<div class="hot-list">
-			<img class="tit-hot" src="../img/home/newRexiao.gif"/>
-			<div class="hot-pro" id="hot-pro">
-			</div>
-		</div>
-		<div class="main" id="main">
-			<h2>适用族群</h2>
-			<div class="box" id="box">
-				
-			</div>
-			<div class="mainfooter">
-				<a href="#" name="1" class="page">1</a>
-				<a href="#" name="2" class="page">2</a>
-				<a href="#" class="point"></a>
+			<div class="account">
+				<input type="checkbox"/>全选
+				<span><a href="">继续购物</a>|<a href="">清空选中商品</a></span>
+				<em>共 <mark>3</mark>  件商品    商品应付总额 (不包含运费) ：(满99元包邮，不含EMS及港澳台)</em>
+				<mark>￥500</mark>
+				<input type="button" value="立即结算"/>
 			</div>
 		</div>
 		<footer>
@@ -168,6 +171,6 @@
 				<a href="#"><img src="../img/home/beian.png"/>沪公网安备 31010402000234号</a>
 			</div>
 		</div>
-		<script type="text/javascript" src="../js/list.js" ></script>
+		<script src="../js/cart.js"></script>
 	</body>
 </html>

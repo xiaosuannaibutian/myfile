@@ -3,6 +3,11 @@ define(["js/doModel"],function(a){
 		$(function(){
 				var oMain=document.getElementById("main");
 				var counter=0;
+				var counter=$("#chartNum");
+				chartShow(counter);
+				disPlay($("#hav"),$("#del"));
+				var car=$("#car");
+				toCar(car,"html/");
 				$.ajax({
 					url: "../php/showList.php",
 					success: function(data){

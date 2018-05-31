@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../iconfont/iconfont.eot');
+  src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../iconfont/iconfont.woff') format('woff'),
+  url('../iconfont/iconfont.ttf') format('truetype'),
+  url('../iconfont/iconfont.svg#iconfont') format('svg');
+}
+$normal-font:12px;
+$normal-fontcolor:#888888;
+$grey-color:#969696;
+$dpink-color:#d10048;
+$bordercolor:#e0dfdb;
+@mixin flexcommon {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+@mixin iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main{
+    box-sizing: border-box; 
+    width: 982px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 25px 30px;
+    h2{
+        @include iconfont; 
+        height:40px;
+        color: $normal-fontcolor;
+        mark{
+            display:inline-block;
+            width: 30px;
+            font-size:20px;
+            background: none;
+            color: #5d5d5d;
+        }
+    }
+    .main_body{
+        background: #fafafa;
+        border: 1px solid $bordercolor;
+        .tit{
+            padding: 0 7px;
+            box-sizing: border-box;
+            height: 34px;
+            line-height: 34px;
+            border-bottom: 1px solid $bordercolor;
+            input{
+                margin-right: 200px;
+            }
+            span{
+                margin-right: 85px;
+                color: #5d5d5d;
+                font-size: 13px;
+                &:nth-of-type(1){
+                    margin-right: 200px;
+                }
+                &:nth-of-type(5){
+                    margin-right: 0;
+                }
+            }
+        }
+        
+    section{
+        padding-left: 7px;
+         display: flex;
+         align-items: center;
+         background: #fffdeb;
+         border-bottom: 1px dotted $bordercolor;
+        &:last-child{
+            border: none;
+        }
+         figure{
+             display: flex;
+             width: 370px;
+             img{
+                width: 88px;
+                height: 88px;
+                border: 1px solid $bordercolor;
+                margin-right: 10px;
+             }
+             figcaption{
+                font-size:12px;
+                h3{
+                    font-size:12px;
+                    font-weight: 400;
+                    height: 20px;
+                }
+                i{
+                    font-style: normal;
+                    color:$normal-fontcolor; 
+                }
+             }
+             
+         }
+         span{
+             text-align: center;
+            width: 130px;
+            font-size: $normal-font;
+            color: $normal-fontcolor;
+            
+        }
+        .delet{
+            cursor:pointer;
+        }
+         
+         .arith{
+             text-align: center;
+             width:140px;
+             display: flex;
+             justify-content: center;
+             div{
+                 cursor: pointer;
+                 width: 25px;
+                 height: 25px;
+                 border: 1px solid #e0e0e0;
+                 font-size: $normal-font;
+                 color: #8e8f8a;
+             }
+             input{
+                 width: 25px;
+                 height: 23px;
+                 text-align: center;
+                 border: none;
+                 border-top: 1px solid #e0e0e0;
+                 border-bottom: 1px solid #e0e0e0;
+                 color: #8e8f8a;
+             }
+         }
+        }    
+        
+    }
+    .account{
+        margin: 15px 0;
+        height: 55px;
+        line-height: 55px;
+        background: #fafafa;
+        color: $normal-fontcolor;
+        font-size:13px;
+        display: flex;
+        align-items: center;
+        span{
+            margin: 0 15px;
+            a{
+                margin: 0 5px;
+            }
+        }
+        em{
+            margin: 0 10px 0 150px;
+            font-style:normal;
+            width:250px;
+            line-height: 15px;
+            mark{
+                color: #ef2e71;
+                background: none;
+                font-size: 16px;
+                font-weight: 900;
+            }
+        }
+        mark{
+           color: #ef2e71;
+           font-size: 20px;
+           font-weight: 900;
+           background: none; 
+        }
+        input[type="button"]{
+            margin-left: 24px;
+            width: 200px;
+            background: #EF2E71;
+            height: 100%;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+    }
+}

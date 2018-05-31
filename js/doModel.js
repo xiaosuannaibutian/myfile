@@ -25,14 +25,11 @@ define(function(){
 					$(this).siblings().css({"display":"block"}).stop().animate({width:325,height:194,opacity:1},500).animate({height:588},500);
 				}
 				else{
-					setCookie("data-id",id,7);
 					window.location.href="html/detail.html?id="+id+"";
 				}
 			})
 			$(".product_level2 article").click(function(){
 				var id=$(this).parent().parent().attr("data-id");
-				var name="data-id"+id;
-				setCookie(name,id,7);
 				window.location.href="html/detail.html?id="+id+"";
 			})
 			
